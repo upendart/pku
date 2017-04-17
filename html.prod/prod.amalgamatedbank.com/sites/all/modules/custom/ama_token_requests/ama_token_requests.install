@@ -1,0 +1,17 @@
+<?php
+
+/*
+ * Implements hook_install
+ */
+function ama_token_requests_install() {
+  variable_set('mail_system', array('default-system' => 'DefaultMailSystem', 'ama_token_requests' => 'AMAMailSystem'));  
+
+  // Create a default scheduled job.
+  $job = array(
+    'type' => 'ama_token_reminder',
+    'period' => 86400 * 7,
+    'crontab' => '0 0 * * 0',
+    'periodic' => TRUE,
+  );
+  JobScheduler::get('ama_token_requests')->set($job);  
+}

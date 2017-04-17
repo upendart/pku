@@ -1,0 +1,8 @@
+name = Amalgamated Security Tokens
+description = Allows the administration of security tokens.
+
+version = "7.x-1.0"
+core = "7.x"
+package = Amalgamated Bank
+
+timestamp = 1484667090

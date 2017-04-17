@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Amalgamated Security Tokens Features feature.
+ */
+
+include_once 'ab_token_requests.features.inc';
